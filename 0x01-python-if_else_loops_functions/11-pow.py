@@ -6,6 +6,8 @@ def pow(a, b):
 
     val = None
 
+    a = a if a > 0 else abs(a)
+
     if b > 0:
         while b != 1:
             val = a ** a
