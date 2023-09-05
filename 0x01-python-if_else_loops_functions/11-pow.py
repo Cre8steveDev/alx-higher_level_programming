@@ -13,7 +13,7 @@ def pow(a, b):
             val += a ** a
             b -= 1
     elif b < 0:
-        while b != -1:
+        while b != 0:
             val += a / a
             b += 1
     return val
