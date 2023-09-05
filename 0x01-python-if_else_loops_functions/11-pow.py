@@ -3,12 +3,15 @@
 def pow(a, b):
     if b == 0:
         return 1
+
+    val = None
+
     if b > 0:
-        while b != 0:
-            a ** a
+        while b != 1:
+            val = a ** a
             b -= 1
     elif b < 0:
-        while b != 0:
-            a ** a
+        while b != -1:
+            val = a ** a
             b += 1
-    return a
+    return val
