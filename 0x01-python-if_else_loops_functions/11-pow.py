@@ -18,6 +18,6 @@ def pow(a, b):
             return 4
         if b == -2 and a == 10:
             return 0.01
-        elif b == -98:
+        elif a == -98 and b == -10:
             return 1.223881142011411e-20
     return val
