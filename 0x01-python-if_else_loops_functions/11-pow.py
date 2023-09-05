@@ -4,7 +4,7 @@ def pow(a, b):
     if b == 0:
         return 1
 
-    val = None
+    val = 0
 
     a = a if a > 0 else abs(a)
 
