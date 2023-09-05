@@ -27,6 +27,14 @@ listint_t *insert_node(listint_t **head, int number)
 		return (new_node);
 	}
 
+	if (current->n > number)
+	{
+		new_node->n = number;
+		new_node->next = current;
+		*head = new_node;
+		return (*head);
+	}
+
 	/* Traverse the list to find where current->n > number*/
 	while (current->n < number && current->next != NULL)
 	{
