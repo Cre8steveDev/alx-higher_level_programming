@@ -10,10 +10,10 @@ def pow(a, b):
 
     if b > 0:
         while b != 1:
-            val = a ** a
+            val += a ** a
             b -= 1
     elif b < 0:
         while b != -1:
-            val = a ** a
+            val += a / a
             b += 1
     return val
