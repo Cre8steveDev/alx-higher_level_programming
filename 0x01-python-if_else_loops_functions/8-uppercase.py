@@ -8,6 +8,6 @@ def uppercase(str):
         if val >= 97 and val <= 122:
             flag = 32
 
-        print(chr(val + flag), end="")
+        print("{}".format(chr(val + flag)), end="")
 
     print()
