@@ -9,6 +9,10 @@
 
 listint_t *insert_node(listint_t **head, int number)
 {
+	(void)number;
+
 	if (head == NULL || *head == NULL)
 		return (NULL);
+
+	return (NULL);
 }
