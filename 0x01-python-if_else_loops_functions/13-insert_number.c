@@ -23,13 +23,14 @@ listint_t *insert_node(listint_t **head, int number)
 	{
 		new_node->n = number;
 		new_node->next = NULL;
+		*head = new_node;
 		return (new_node);
 	}
 
 	/* Traverse the list to find where current->n > number*/
 	while (current->n < number && current->next != NULL)
 	{
-		if (current->next->n > number)
+		if (current->n >= number)
 			break;
 		current = current->next;
 	}
