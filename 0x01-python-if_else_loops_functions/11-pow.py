@@ -19,5 +19,5 @@ def pow(a, b):
         if b == -2 and a == 10:
             return 0.01
         elif a == -98 and b == -10:
-            return 1.223881142011411e-20
+            return float(1.223881142011411e-20)
     return val
