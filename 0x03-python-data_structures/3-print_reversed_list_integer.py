@@ -5,8 +5,7 @@ def print_reversed_list_integer(my_list=[]):
     if not my_list:
         return
 
-    my_list.reverse()
-    rev_list = my_list
+    rev_list = my_list[::-1]
 
     for item in rev_list:
         print("{}".format(item))
