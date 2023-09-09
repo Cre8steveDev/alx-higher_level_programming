@@ -18,7 +18,7 @@ int is_palindrome(listint_t **head)
 	(void)t_len;
 
 	if (head == NULL || *head == NULL)
-		return (0);
+		return (1);
 	/*Find the length*/
 	first = (*head)->n;
 	ptr = *head;
