@@ -10,38 +10,32 @@
 
 int is_palindrome(listint_t **head)
 {
-	int len = 0, first = 0, last = 0;
-	int middle = 0, arr_l[25] = {0}, t_len;
+	int rev_array[30] = {0};
+	int rev_idx = 29, len = 0, trac = 0;
 	listint_t *ptr;
-
-	(void)last;
-	(void)t_len;
 
 	if (head == NULL || *head == NULL)
 		return (1);
-	/*Find the length*/
-	first = (*head)->n;
+
 	ptr = *head;
-
 	while (ptr != NULL)
 	{
-		len++;
-		if (len == 4)
-			middle = ptr->n;
-		if (ptr->next == NULL)
-			last = ptr->n;
+		rev_array[rev_idx] = ptr->n;
+		len++, rev_idx--;
 		ptr = ptr->next;
 	}
-	ptr = *head, t_len = len;
-	while (ptr != NULL)
+	ptr = *head, len = rev_idx;
+	rev_idx = 29, trac = len;
+	while (ptr != NULL && trac != len / 2)
 	{
-		arr_l[len] = ptr->n;
-		len--;
-		ptr = ptr->next;
+		if (rev_array[rev_idx] == ptr->n)
+		{
+			ptr = ptr->next;
+			rev_idx--, trac--;
+			continue;
+		}
+		return (0);
 	}
 
-	if (first == arr_l[1] && last == arr_l[t_len] && middle == arr_l[4])
-		return (1);
-
-	return (0);
+	return (1);
 }
