@@ -1,5 +1,6 @@
 #include <stddef.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
 
 /**
@@ -11,7 +12,7 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *ptr;
-	int array[3000] = {0};
+	int *array = NULL;
 	int len = 0, r_idx = 2999, tac = 0;
 
 	if (head == NULL)
@@ -21,6 +22,8 @@ int is_palindrome(listint_t **head)
 
 	if (ptr == NULL || ptr->next == NULL)
 		return (1);
+
+	array = malloc(sizeof(int) * 3000);
 
 	while (ptr != NULL)
 	{
