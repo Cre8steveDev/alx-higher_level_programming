@@ -20,7 +20,7 @@ int is_palindrome(listint_t **head)
 	ptr = *head;
 	while (ptr != NULL)
 	{
-		if (iter == 6)
+		if (iter == 10)
 			break;
 		rev_array[rev_idx] = ptr->n;
 		len++, rev_idx--;
