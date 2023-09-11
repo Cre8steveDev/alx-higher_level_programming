@@ -10,8 +10,8 @@
 
 int is_palindrome(listint_t **head)
 {
-	int rev_array[40] = {0};
-	int rev_idx = 39, len = 0, trac = 0, list_len = 0;
+	int rev_array[15] = {0};
+	int rev_idx = 15, len = 0, trac = 0, list_len = 0;
 	listint_t *ptr;
 
 	if (head == NULL || *head == NULL)
