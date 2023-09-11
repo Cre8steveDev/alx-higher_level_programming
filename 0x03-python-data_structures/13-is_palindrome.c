@@ -11,8 +11,8 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *ptr;
-	int array[1000] = {0};
-	int len = 0, r_idx = 999;
+	int array[1500] = {0};
+	int len = 0, r_idx = 1499;
 
 	if (head == NULL)
 		return (1);
