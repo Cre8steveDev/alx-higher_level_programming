@@ -25,8 +25,9 @@ int is_palindrome(listint_t **head)
 		ptr = ptr->next;
 	}
 	ptr = *head, len = rev_idx;
-	rev_idx = 29, trac = len;
-	while (ptr != NULL && trac != len / 2)
+	rev_idx = 29;
+
+	while (ptr != NULL)
 	{
 		if (rev_array[rev_idx] == ptr->n)
 		{
