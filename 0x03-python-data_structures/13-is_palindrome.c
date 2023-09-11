@@ -11,7 +11,7 @@
 int is_palindrome(listint_t **head)
 {
 	int rev_array[15] = {0};
-	int rev_idx = 15, len = 0, trac = 0, list_len = 0;
+	int rev_idx = 15, len = 0, trac = 0, list_len = 0, half = 0;
 	listint_t *ptr;
 
 	if (head == NULL || *head == NULL)
@@ -25,9 +25,9 @@ int is_palindrome(listint_t **head)
 		ptr = ptr->next;
 	}
 	ptr = *head, list_len = len;
-	rev_idx++;
+	rev_idx++, half = list_len / 2;
 
-	while (ptr != NULL && trac <= (list_len / 2) - 1)
+	while (ptr != NULL && trac <= half)
 	{
 		if (rev_array[rev_idx] == ptr->n)
 		{
