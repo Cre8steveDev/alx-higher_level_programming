@@ -1,9 +1,9 @@
 #!usr/bin/python3
 
 def square_matrix_simple(matrix=[]):
-    newList = []
+    finalList = []
 
-    for mem in matrix:
-        newList.append((list(map(lambda x: x**2, mem))))
+    for i in range(len(matrix)):
+        finalList += [list(map(lambda x: x ** 2, matrix[i]))]
 
-    return newList
+    return finalList
