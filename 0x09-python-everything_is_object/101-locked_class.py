@@ -3,7 +3,9 @@
 
 
 class LockedClass:
-    __slots__ = ('first_name',)
+    """Locked Class Class"""
+    __slots__ = ['first_name']
 
     def __init__(self):
+        """Init class method nothing much"""
         pass
