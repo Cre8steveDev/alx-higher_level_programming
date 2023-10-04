@@ -1,3 +1,3 @@
-def copy_list(l):
-    a = l.copy()
+def copy_list(arr):
+    a = arr.copy()
     return a
