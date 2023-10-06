@@ -73,8 +73,10 @@ class Rectangle:
             return ""
         else:
             my_str = ""
+            sym_str = str(self.print_symbol)if self.print_symbol else str(
+                Rectangle.print_symbol)
             for i in range(self.height):
-                my_str += (str(Rectangle.print_symbol) * self.width + "\n")
+                my_str += (sym_str * self.width + "\n")
             return my_str.rstrip()
 
     def __repr__(self):
