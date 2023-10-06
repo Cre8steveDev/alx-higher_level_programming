@@ -9,6 +9,7 @@ class Rectangle:
         __height
     Methods: Will enter again"""
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         if not isinstance(width, int):
@@ -24,6 +25,7 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = height
+            Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -72,7 +74,7 @@ class Rectangle:
         else:
             my_str = ""
             for i in range(self.height):
-                my_str += "#" * self.width + "\n"
+                my_str += (str(Rectangle.print_symbol) * self.width + "\n")
             return my_str.rstrip()
 
     def __repr__(self):
@@ -81,3 +83,4 @@ class Rectangle:
     def __del__(self):
         """Method called when instance is deleted"""
         print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
