@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 import sys
+"""N Queens Advanced Task"""
 
 
 def is_safe(board, row, col):
@@ -33,7 +34,7 @@ def solve_nqueens(n, board, row=0):
 def main():
     # Check for the correct number of arguments
     if len(sys.argv) != 2:
-        print("Usage: {} N".format(sys.argv[0]))
+        print("Usage: nqueens N")
         sys.exit(1)
 
     try:
