@@ -1,1 +1,24 @@
 # Test cases for Task 7
+
+>>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+
+# Example 1
+>>> bg = BaseGeometry()
+
+>>> bg.integer_validator("my_int", 12)
+>>> bg.integer_validator("width", 89)
+
+# Example 2
+>>> dg = BaseGeometry()
+>>> dg.integer_validator("my_int", 12)
+Traceback (most recent call last):
+...
+TypeError: <name> must be an integer
+
+# Example 3
+>>> dg = BaseGeometry()
+>>> dg.integer_validator("my_int", 12)
+Traceback (most recent call last):
+...
+ValueError: <name> must be greater than 0
+
