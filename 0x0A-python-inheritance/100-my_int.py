@@ -5,7 +5,7 @@ class MyInt(int):
 
     def __init__(self, value):
         """Instantiate class"""
-        super().__init__()
+        super().__init__(value)
 
     def __eq__(self, other):
         # Override == (equality) to behave as !=
