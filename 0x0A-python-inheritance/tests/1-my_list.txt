@@ -1,17 +1,17 @@
 # Test Cases for the method
->>> from 1-my_list import MyList
+>>> MyList = __import__("1-my_list").MyList
 
 >>> my_custom_list = MyList([3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5])
 >>> my_custom_list.print_sorted()
 [1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 9]
 
->>> my_custom_list = MyList([3, 6, 5, 3, 5, None])
+>>> my_custom_list = MyList([None, 3, 6, 5, 3, 5])
 >>> my_custom_list.print_sorted()
 Traceback (most recent call last):
 ...
 TypeError: '<' not supported between instances of 'int' and 'NoneType'
 
->>> my_custom_list = MyList([3, 6, 5, 3, 5, {2}])
+>>> my_custom_list = MyList([{2}, 3, 6, 5, 3, 5])
 >>> my_custom_list.print_sorted()
 Traceback (most recent call last):
 ...
@@ -21,18 +21,18 @@ TypeError: '<' not supported between instances of 'int' and 'set'
 >>> my_custom_list.print_sorted()
 Traceback (most recent call last):
 ...
-TypeError: '<' not supported between instances of 'int' and 'tuple'
+TypeError: '<' not supported between instances of 'tuple' and 'int'
 
 >>> my_custom_list = MyList([3, 6, {3:4}])
 >>> my_custom_list.print_sorted()
 Traceback (most recent call last):
 ...
-TypeError: '<' not supported between instances of 'int' and 'tuple'
+TypeError: '<' not supported between instances of 'dict' and 'int'
 
->>> my_custom_list = MyList([3, 6, {3:4}])
+>>> my_custom_list = MyList([3, 6, "Hello"])
 >>> my_custom_list.print_sorted()
 Traceback (most recent call last):
 ...
-TypeError: '<' not supported between instances of 'int' and 'str'
+TypeError: '<' not supported between instances of 'str' and 'int'
 
 
