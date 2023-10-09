@@ -18,6 +18,17 @@ class BaseGeometry():
             raise ValueError("<name> must be greater than 0")
 
 
+class Rectangle(BaseGeometry):
+    """A Base Geometry class"""
+
+    def __init__(self, width, height):
+        """Instantiation method"""
+        super().integer_validator("", height)
+        super().integer_validator("", height)
+        self.__width = width
+        self.__height = height
+
+
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
