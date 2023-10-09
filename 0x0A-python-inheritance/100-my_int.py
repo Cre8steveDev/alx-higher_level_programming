@@ -3,6 +3,10 @@
 class MyInt(int):
     """A New Int that rebels"""
 
+    def __init__(self, value):
+        """Instantiate class"""
+        super().__init__()
+
     def __eq__(self, other):
         # Override == (equality) to behave as !=
         return super().__ne__(other)
