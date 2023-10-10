@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 
+"""Class for the MYInt Werey"""
+
+
 class MyInt(int):
     """A New Int that rebels"""
 
