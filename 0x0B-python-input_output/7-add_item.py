@@ -19,16 +19,12 @@ with open("add_item.json", "a+", encoding="UTF8") as file:
     if list_in_file:
         list_in_file = json.loads(list_in_file)
 
-if type(list_in_file) == list:
-    for x in range(len(sys.argv)):
-        if x != 0:
-            list_in_file.append(sys.argv[x])
-
-else:
+if type(list_in_file) != list:
     list_in_file = []
-    for x in range(len(sys.argv)):
-        if x != 0:
-            list_in_file.append(sys.argv[x])
+
+for x in range(len(sys.argv)):
+    if x != 0:
+        list_in_file.append(sys.argv[x])
 
 # Write to file
 with open("add_item.json", "w", encoding="UTF8") as file:
