@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 """Append to a file if it contains a certain string"""
 
 
