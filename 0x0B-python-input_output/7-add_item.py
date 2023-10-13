@@ -12,9 +12,12 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 # Read from the file to see if there's a list
 
-with open("add_item.json", "r", encoding="UTF8") as file:
+with open("add_item.json", "a+", encoding="UTF8") as file:
+    file.seek(0)
     list_in_file = file.read()
-    list_in_file = json.loads(list_in_file)
+
+    if list_in_file:
+        list_in_file = json.loads(list_in_file)
 
 if type(list_in_file) == list:
     for x in range(len(sys.argv)):
