@@ -1,14 +1,21 @@
+#!/usr/bin/python3
+
+"""Log parsing and using a default dict to count
+values to get a default
+"""
 import sys
 from collections import defaultdict
 
 
 def print_statistics(total_size, status_code_counts):
+    """Print Statistics"""
     print(f"Total file size: {total_size}")
     for code in sorted(status_code_counts):
         print(f"{code}: {status_code_counts[code]}")
 
 
 def process_input_line(line, total_size, status_code_counts):
+    """Process in put line"""
     try:
         parts = line.split()
         size = int(parts[-1])
@@ -25,6 +32,7 @@ def process_input_line(line, total_size, status_code_counts):
 
 
 def main():
+    """main function"""
     total_size = 0
     status_code_counts = defaultdict(int)
     line_counter = 0
