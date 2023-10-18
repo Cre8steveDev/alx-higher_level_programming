@@ -12,6 +12,12 @@ class TestMaxInteger(unittest.TestCase):
     def test_1(self):
         self.assertEqual(max_integer([2, 3, 5]), 5)
 
+    def test_1c(self):
+        self.assertEqual(max_integer([2, 13, 5]), 13)
+
+    def test_1d(self):
+        self.assertEqual(max_integer([12, 3, 5]), 12)
+
     def test_1a(self):
         self.assertEqual(max_integer("Hello"), "o")
 
