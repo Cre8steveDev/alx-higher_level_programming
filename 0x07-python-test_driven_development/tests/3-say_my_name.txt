@@ -1,0 +1,31 @@
+============================
+Test Cases For Say my name Module
+===========================
+
+`say_my_name(first_name, last_name)` Combines both names
+and prints a string
+
+>>> say_my_name = __import__("3-say_my_name").say_my_name
+
+Normal Test Cases:
+
+>>> say_my_name("Stephen")
+My name is Stephen
+
+>>> say_my_name("Stephen", "Omoregie")
+My name is Stephen Omoregie
+
+>>> say_my_name("Joel", "Osteen")
+My name is Joel Osteen
+
+>>> say_my_name("Joel", 12)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+
+>>> say_my_name(["Joel"], "Nevets")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+
