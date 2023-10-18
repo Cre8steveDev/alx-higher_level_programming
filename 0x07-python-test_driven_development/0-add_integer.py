@@ -24,5 +24,3 @@ if __name__ == "__main__":
     result = add_integer(a, b)
 
     print(result)
-
-

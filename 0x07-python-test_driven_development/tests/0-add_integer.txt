@@ -43,3 +43,23 @@ TypeError: a must be an integer
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
+
+==================
+>>> add_integer(None, 4)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+
+==================
+>>> add_integer()
+Traceback (most recent call last):
+...
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+==================
+>>> add_integer()
+Traceback (most recent call last):
+...
+TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
