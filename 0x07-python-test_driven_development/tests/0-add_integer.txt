@@ -1,0 +1,45 @@
+===================================
+Add Integer test
+===================================
+
+`add_integer(a, b)` returns the sum of two integers
+a must be an integer
+b while optional, must be an integer
+
+>>> add_integer = __import__("0-add_integer").add_integer
+
+>>> add_integer(10, 5)
+15
+
+>>> add_integer(2, 4)
+6
+
+>>> add_integer(5.0, 13.5)
+18
+
+>>> mya = [5, 4, 3]
+>>> add_integer(5.0, mya[1])
+9
+
+>>> add_integer("5", 41)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+==================
+>>> add_integer(5, "41")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+======================
+>>> add_integer([5], 1)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+==================
+>>> add_integer({5}, 4)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
