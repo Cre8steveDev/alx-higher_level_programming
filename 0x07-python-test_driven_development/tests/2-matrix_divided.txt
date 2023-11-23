@@ -1,0 +1,50 @@
+==================
+Test Cases for Matrix Division Module
+=================
+
+`matrix_divided(list, div)` Returns a new list of lists whose individual items are divided by the division number
+
+
+
+Testing Normal Cases - Doctest
+
+>>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+
+>>> matrix_divided([[2, 4, 6], [8, 10, 12]], 2)
+[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+
+>>> matrix_divided([[9, 14, 60], [81, 100, 112]], 9)
+[[1.0, 1.56, 6.67], [9.0, 11.11, 12.44]]
+
+
+Test Case Edges:
+
+>>> matrix_divided([None, [81, 100, 112]], 7)
+Traceback (most recent call last):
+...
+TypeError: object of type 'NoneType' has no len()
+
+
+>>> matrix_divided([[1, 3, "8"], [4, 5, 6]], 3)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+>>> matrix_divided([[4, 6], [81, 100, 112]], 4)
+Traceback (most recent call last):
+...
+TypeError: Each row of the matrix must have the same size
+
+
+Test Cases Invalid div number
+
+>>> matrix_divided([[4, 6], [81, 100, 112]], "4")
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+
+>>> matrix_divided(None, 4)
+Traceback (most recent call last):
+...
+TypeError: 'NoneType' object is not iterable
