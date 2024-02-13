@@ -9,7 +9,7 @@ if (args.length < 4) {
 } else {
   let newArr = args.slice(2);
   newArr = newArr.map(elem => parseInt(elem));
-  
+
   // Sort the array and take the second to last entry
   newArr = newArr.toSorted();
   console.log(newArr[newArr.length - 2]);
