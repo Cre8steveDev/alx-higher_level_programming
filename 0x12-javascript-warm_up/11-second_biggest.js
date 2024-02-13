@@ -8,5 +8,5 @@ if (args.length < 4) {
   console.log(0);
 } else {
   const sortedArr = args.toSorted();
-  console.log(sortedArr[3]);
+  console.log(sortedArr[args.length - 2]);
 }
