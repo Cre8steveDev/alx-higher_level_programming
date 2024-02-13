@@ -7,6 +7,10 @@ const args = process.argv;
 if (args.length < 4) {
   console.log(0);
 } else {
-  const sortedArr = args.toSorted();
-  console.log(parseInt(sortedArr[args.length - 2]));
+  let newArr = args.slice(2);
+  newArr = newArr.map(elem => parseInt(elem));
+  
+  // Sort the array and take the second to last entry
+  newArr = newArr.toSorted();
+  console.log(newArr[newArr.length - 2]);
 }
