@@ -3,5 +3,10 @@
 // Write a function that returns the reverse verions of a list
 
 exports.esrever = function (list) {
-  return list.toReversed();
+  const newList = [];
+  for (let i = list.length - 1; i >= 0; i--) {
+    newList.push(list[i]);
+  }
+
+  return newList;
 };
