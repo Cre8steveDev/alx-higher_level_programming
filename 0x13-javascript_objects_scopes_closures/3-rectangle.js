@@ -12,13 +12,13 @@ class Rectangle {
   }
 
   // Create an instance method caled print that prints the rect using X
-	print () {
-		for (const i = 0; i < this.height; i++){
-			for (const j = 0; j < this.width; j++){
-				console.log('X');
-			}
-		}
-	}
+  print () {
+    for (let i = 0; i < this.height; i++) {
+      for (let j = 0; j < this.width; j++) {
+        console.log('X');
+      }
+    }
+  }
 }
 
 module.exports = Rectangle;
