@@ -5,6 +5,7 @@
 let count = 0;
 
 exports.logMe = function (item) {
-  console.log(`${count}: ${item}`)
+  // Print in stated format
+  console.log(`${count}: ${item}`);
   count++;
-}
+};
