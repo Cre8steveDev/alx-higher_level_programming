@@ -3,7 +3,7 @@
 // Write a class Square the defines a square and inherits from Rectangle of
 // 4-rectangle.js
 
-const Rectangle = require('4-rectangle');
+const Rectangle = require('./4-rectangle');
 
 class Square extends Rectangle {
   constructor (size) {
