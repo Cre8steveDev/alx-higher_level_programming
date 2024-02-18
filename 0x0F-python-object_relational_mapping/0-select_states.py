@@ -26,3 +26,6 @@ if __name__ == "__main__":
     # Print result to see output
     for tup in list(result):
         print(tup)
+
+    cur.close()
+    db.close()

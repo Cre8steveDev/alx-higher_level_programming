@@ -28,3 +28,6 @@ if __name__ == "__main__":
     # Print the data returned
     for tup in results:
         print(tup)
+
+    cur.close()
+    db.close()

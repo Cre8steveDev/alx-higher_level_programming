@@ -11,7 +11,7 @@ if __name__ == "__main__":
     _, username, password, dbName = sys.argv
 
     # Make connection to the database with MySQLdb module
-    db = MySQLdb.connect(host='localhost', user=username,
+    db = MySQLdb.connect(host='localhost', port=3306, user=username,
                          passwd=password, db=dbName)
 
     # Get the cursor object from the db
@@ -19,10 +19,13 @@ if __name__ == "__main__":
 
     # Execute your query on the cursor object
     cur.execute("SELECT cities.id, cities.name, states.name\
-    FROM states JOIN cities ON states.id = cities.state_id ORDER BY cities.id ASC")
+    FROM states INNER JOIN cities ON states.id = cities.state_id ORDER BY cities.id ASC")
 
     results = cur.fetchall()
 
     # Print the data returned
     for tup in results:
         print(tup)
+
+    cur.close()
+    db.close()
