@@ -20,8 +20,8 @@ if __name__ == "__main__":
     # Execute your query on the cursor object
     # cur.execute("SELECT * FROM states WHERE states.name={}"
     # .format(searchName))
-    cur.execute("SELECT * FROM states WHERE name LIKE '{}'"
-                .format(sys.argv[4]))
+    cur.execute("SELECT * FROM states WHERE name LIKE BINARY'{}'"
+                .format(searchName))
 
     results = cur.fetchall()
 
