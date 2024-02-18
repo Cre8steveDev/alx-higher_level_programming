@@ -18,8 +18,9 @@ if __name__ == "__main__":
     cur = db.cursor()
 
     # Execute your query on the cursor object
-    queryString = "SELECT * FROM states WHERE states.name={}".format(searchName)
-    cur.execute(queryString)
+    # cur.execute("SELECT * FROM states WHERE states.name={}".format(searchName))
+    cur.execute("SELECT * FROM states WHERE name LIKE '{}'"
+                .format(sys.argv[4]))
 
     results = cur.fetchall()
 
