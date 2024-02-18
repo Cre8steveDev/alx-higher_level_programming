@@ -8,7 +8,7 @@ if __name__ == "__main__":
     import MySQLdb
 
     # Get the Command line arguments
-    _, username, password, dbName = sys.argv
+    username, password, dbName = sys.argv[1:]
 
     # Make connection to the database with MySQLdb module
     db = MySQLdb.connect(host='localhost', port=3306, user=username,
@@ -25,7 +25,8 @@ if __name__ == "__main__":
 
     # Print the data returned
     for tup in results:
-        print(tup)
+        print(f"({tup[0]}, '{tup[1]}', '{tup[2]}')")
 
+    # Cose database connection
     cur.close()
     db.close()
