@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-
-# Write a script that lists all cities from the database
-# This will be requiring Table Joining
+"""Write a script that lists all cities from the database.
+This will be requiring Table Joining
+"""
 
 if __name__ == "__main__":
     import sys
