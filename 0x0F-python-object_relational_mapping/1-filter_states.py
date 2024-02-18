@@ -20,9 +20,9 @@ if __name__ == "__main__":
     # Execute your query on the cursor object
     # the 'N%' is like a matching patter
     # saying "And any other possible combo of letters
-    # cur.execute("SELECT * FROM states WHERE states.name LIKE 'N%'")
-    cur.execute("SELECT * FROM states WHERE LEFT(states.name, 1) = 'N' "
-                "ORDER BY states.id ASC")
+    cur.execute("SELECT * FROM states WHERE states.name LIKE 'N%' ORDER BY states.id ASC")
+    # cur.execute("SELECT * FROM states WHERE LEFT(states.name, 1) = 'N' "
+    #            "ORDER BY states.id ASC")
 
     results = cur.fetchall()
 
