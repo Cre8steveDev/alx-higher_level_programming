@@ -3,24 +3,26 @@
 database hbtn_0e_0_usa"""
 # import the sys module to access command line
 # and the MySQLdb module
-import sys
-import MySQLdb
 
-# Retrieve arguments from the command line
-_, username, password, dbName = sys.argv
+if __name__ == "__main__":
+    import sys
+    import MySQLdb
 
-# Connect to the MySQL Server if on local host or to remote machine
-db = MySQLdb.connect(host='localhost', user=username,
-                     passwd=password, db=dbName)
-# Retrieve cursor from the db instance
-cur = db.cursor()
+    # Retrieve arguments from the command line
+    _, username, password, dbName = sys.argv
 
-# Execute a MySQL Command on the cursor object
-cur.execute("SELECT * FROM states ORDER BY states.id ASC")
+    # Connect to the MySQL Server if on local host or to remote machine
+    db = MySQLdb.connect(host='localhost', user=username,
+                         passwd=password, db=dbName)
+    # Retrieve cursor from the db instance
+    cur = db.cursor()
 
-# Use the fetchall method on the cursor to retrieve the results
-result = cur.fetchall()
+    # Execute a MySQL Command on the cursor object
+    cur.execute("SELECT * FROM states ORDER BY states.id ASC")
 
-# Print result to see output
-for tup in list(result):
-    print(tup)
+    # Use the fetchall method on the cursor to retrieve the results
+    result = cur.fetchall()
+
+    # Print result to see output
+    for tup in list(result):
+        print(tup)
