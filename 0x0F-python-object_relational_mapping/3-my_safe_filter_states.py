@@ -26,7 +26,8 @@ if __name__ == "__main__":
     cur = db.cursor()
 
     # Execute your query on the cursor object
-    cur.execute("SELECT * FROM states WHERE name LIKE BINARY'{}' ORDER BY states.id ASC"
+    cur.execute("SELECT * FROM states WHERE name LIKE BINARY'{}' "
+                "ORDER BY states.id ASC"
                 .format(searchName))
 
     results = cur.fetchall()
