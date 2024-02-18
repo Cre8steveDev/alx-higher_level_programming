@@ -20,7 +20,10 @@ if __name__ == "__main__":
     # Execute your query on the cursor object
     # the 'N%' is like a matching patter
     # saying "And any other possible combo of letters
-    cur.execute("SELECT * FROM states WHERE states.name LIKE 'N%'")
+    # cur.execute("SELECT * FROM states WHERE states.name LIKE 'N%'")
+    cur.execute("SELECT * FROM states WHERE \
+    LEFT(states.name, 1) = 'N'")
+
     results = cur.fetchall()
 
     # Print the data returned
