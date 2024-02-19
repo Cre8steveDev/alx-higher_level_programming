@@ -11,6 +11,9 @@ if __name__ == "__main__":
     import MySQLdb
 
     # Retrieve command line arguments
+    if len(sys.argv) < 5:
+        sys.exit()
+
     username, password, dbName, stateName = sys.argv[1:]
 
     # Validate user input from stateName
