@@ -36,4 +36,8 @@ if __name__ == "__main__":
     result: tuple = cur.fetchall()
 
     for idx, tup in enumerate(result):
-        print(tup[0], end=("\n" if idx + 1 == len(result) else ", "))
+        print(tup[0], end=("" if idx + 1 == len(result) else ", "))
+    print()
+
+    cur.close()
+    db.close()
