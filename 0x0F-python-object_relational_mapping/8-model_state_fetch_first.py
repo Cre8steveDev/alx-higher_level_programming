@@ -26,8 +26,8 @@ if __name__ == "__main__":
     # Iterate through the database using the query function et al.
     # pass the defined Class, e.g. table you want to access
 
-    for record in database.query(State).order_by(State.id).limit(1):
-        if not record:
-            print("Nothing")
-        else:
-            print(record.id, record.name, sep=": ")
+    record = database.query(State).first()
+    if not record:
+        print("Nothing")
+    else:
+        print(record.id, record.name, sep=": ")
