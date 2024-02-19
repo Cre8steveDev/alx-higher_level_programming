@@ -17,4 +17,5 @@ class State(Base):
     __tablename__ = 'states'
     id = Column(Integer, unique=True, nullable=False, primary_key=True)
     name = Column(String(128), nullable=False)
+    # This creates a one to many relationship with the cities database
     cities = relationship("City", backref="states")
