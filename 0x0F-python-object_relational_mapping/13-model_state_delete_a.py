@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Updating a Record in the database
+"""Deleting records from the database the database
 """
 import sys
 from model_state import Base, State
@@ -20,12 +20,14 @@ if __name__ == "__main__":
     database = Session()
 
     # retrieve the record from the database that matches
-    retrievedMatch = database.query(
-        State).filter(State.id == 2).first()
+    # the filtering pattern
+    retrievedMatches = database.query(
+        State).filter(State.name.like('%a%')).all()
 
-    # An object representing the match is returned
-    # You can mutate it by reference by adjusting the
-    # necessary attribute and then commit
-    retrievedMatch.name = 'New Mexico'
-    # Commit changes to the database
+    # Iterate through the array of returned matches
+    # then use the delete method from the database
+    # Delete the record then commit changes
+    for record in retrievedMatches:
+        database.delete(record)
+
     database.commit()
