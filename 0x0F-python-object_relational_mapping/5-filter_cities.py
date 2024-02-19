@@ -28,8 +28,9 @@ if __name__ == "__main__":
     cur = db.cursor()
 
     # Execute SQL Statement on the cursor
-    cur.execute(f"SELECT name FROM cities WHERE state_id = (SELECT id FROM \
-    states WHERE name = '{stateName}')")
+    cur.execute("""SELECT cities.name FROM
+                cities INNER JOIN states ON states.id=cities.state_id
+                WHERE states.name=%s""", (stateName,))
 
     # retrieve the result
     result: tuple = cur.fetchall()
