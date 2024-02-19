@@ -6,7 +6,6 @@ from relationship_state import Base, State
 from relationship_city import City
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy.orm import relationship
 
 
 if __name__ == "__main__":
@@ -25,6 +24,6 @@ if __name__ == "__main__":
         # After querying the States database, doing instance.cities
         # Will trigger another query that will get you all the
         # Cities associated with the State object
-        for city_ins in instance.cities:
+        for city in instance.cities:
             print("    ", end="")
-            print(city_ins.id, city_ins.name, sep=": ")
+            print(city.id, city.name, sep=": ")
