@@ -1,3 +1,3 @@
 #!/bin/bash
 # Takes a url that sends a post requests with variables
-curl -X POST -d"email=test@gmail.com" -d "I will always be here for PLD" "$1"
+curl -X POST -data-urlencode email=test@gmail.com subject="I will always be here for PLD" "$1"
