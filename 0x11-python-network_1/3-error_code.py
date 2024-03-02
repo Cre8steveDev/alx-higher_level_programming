@@ -16,4 +16,4 @@ if __name__ == "__main__":
             """Open the url with the data to get a response"""
             print(response.read().decode("utf-8"))
     except HTTPError as e:
-        print("Error code: {}".format(e.status))
+        print("Error code: {}".format(e.code))
