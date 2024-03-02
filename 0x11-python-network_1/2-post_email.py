@@ -6,12 +6,14 @@ from urllib.request import Request, urlopen
 from urllib.parse import urlencode
 from sys import argv
 
-# Get url and email from Command line
-url = argv[1]
-data = urlencode({"email": argv[2]}).encode("ascii")
+if __name__ == "__main__":
+    # Get url and email from Command line
+    url = argv[1]
+    data = urlencode({"email": argv[2]}).encode("ascii")
 
-# create Request object
-req = Request(url, data)
+    # create Request object
+    req = Request(url, data)
 
-with urlopen(req) as response:
-    print(response.read().decode("utf-8"))
+    with urlopen(req) as response:
+        """Open the url with the data to get a response"""
+        print(response.read().decode("utf-8"))
