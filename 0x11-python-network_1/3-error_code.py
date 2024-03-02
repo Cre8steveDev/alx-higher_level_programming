@@ -3,17 +3,17 @@
 request to the URL and displays the body of the response
 decoded in utf-8 while handling error """
 
-import sys
-import urllib.error
-import urllib.request
-
+from urllib.request import Request, urlopen
+from urllib.error import HTTPError
+from sys import argv
 
 if __name__ == "__main__":
-    url = sys.argv[1]
+    # create Request object
+    req = Request(argv[1])
 
-    request = urllib.request.Request(url)
     try:
-        with urllib.request.urlopen(request) as response:
-            print(response.read().decode("ascii"))
-    except urllib.error.HTTPError as e:
+        with urlopen(req) as response:
+            """Open the url with the data to get a response"""
+            print(response.read().decode())
+    except HTTPError as e:
         print("Error code: {}".format(e.code))
