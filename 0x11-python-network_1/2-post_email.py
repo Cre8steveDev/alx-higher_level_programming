@@ -15,5 +15,3 @@ req = Request(url, data)
 
 with urlopen(req) as response:
     print(response.read().decode("utf-8"))
-
-
