@@ -1,19 +1,19 @@
 #!/usr/bin/python3
-"""Write a python script that takes in a URL, sends a
+""" Write a python script that takes in a URL, sends a
 request to the URL and displays the body of the response
-decoded in utf-8 while handling error"""
+decoded in utf-8 while handling error """
 
-from urllib.request import Request, urlopen
-from urllib.error import HTTPError
-from sys import argv
+import sys
+import urllib.error
+import urllib.request
+
 
 if __name__ == "__main__":
-    # create Request object
-    req = Request(argv[1])
+    url = sys.argv[1]
 
+    request = urllib.request.Request(url)
     try:
-        with urlopen(req) as response:
-            """Open the url with the data to get a response"""
-            print(response.read().decode())
-    except HTTPError as e:
+        with urllib.request.urlopen(request) as response:
+            print(response.read().decode("ascii"))
+    except urllib.error.HTTPError as e:
         print("Error code: {}".format(e.code))
