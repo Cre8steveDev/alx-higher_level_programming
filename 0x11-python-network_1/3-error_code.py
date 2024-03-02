@@ -14,6 +14,6 @@ if __name__ == "__main__":
     try:
         with urlopen(req) as response:
             """Open the url with the data to get a response"""
-            print(response.read().decode("utf-8"))
+            print(response.read().decode("ascii"))
     except HTTPError as e:
         print("Error code: {}".format(e.code))
