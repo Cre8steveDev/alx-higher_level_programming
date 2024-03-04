@@ -13,7 +13,7 @@ if __name__ == "__main__":
 
     github_url = "https://api.github.com/repos/{}/{}/commits".format(owner_name, repo_name,)
 
-    res = requests.get(github_url, params=query_param, headers=header)
+    res = requests.get(github_url)
     data = res.json()
     try:
         for i in range(10):
