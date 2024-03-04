@@ -10,7 +10,7 @@ if __name__ == "__main__":
     url = argv[1]
 
     payload = {'email': email_address}
-    res = requests.post(url, json=payload)
+    res = requests.post(url, data=payload)
 
     # Print the body of the response
     print(res.text)
