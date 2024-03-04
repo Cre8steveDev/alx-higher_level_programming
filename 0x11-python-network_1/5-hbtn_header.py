@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Write a Python Script that takes in a URL, sends a request to the URL and displays the """
+"""Write a Python Script that takes in a URL,
+sends a request to the URL and displays the """
 
 if __name__ == "__main__":
     from sys import argv
