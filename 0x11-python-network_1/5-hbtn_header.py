@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Write a Python Script that takes in a URL, sends a
-request to the URL and displays the """
+""" Python Script """
 
 from sys import argv
 import requests
+"""Write a Python Script that takes in a URL, sends a request to the URL and displays the """
 
 # Make request to the url
 res = requests.get(argv[1])
