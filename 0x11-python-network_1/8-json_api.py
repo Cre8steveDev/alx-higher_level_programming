@@ -12,14 +12,14 @@ if __name__ == "__main__":
     payload = {"q": search}
 
     # Make request to the url
-    res = requests.post("http://0.0.0.0:5000/search_user", params=payload)
+    res = requests.post("http://0.0.0.0:5000/search_user", data=payload)
 
     # attempt to convert the body to json
     try:
-        body = res.json()
-        if len(body) == 0:
+        body: dict = res.json()
+        if body == {}:
             print("No result")
         else:
-            print("[{}] {}".format(body.id, body.name))
+            print("[{}] {}".format(body.get("id"), body.get("name")))
     except ValueError as e:
         print("Not a valid JSON")
