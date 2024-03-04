@@ -9,4 +9,3 @@ import requests
 res = requests.get(argv[1])
 req_id = res.headers["X-Request-Id"]
 print(req_id)
-
