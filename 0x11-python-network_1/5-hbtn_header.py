@@ -7,5 +7,7 @@ if __name__ == "__main__":
 
     # Make request to the url
     res = requests.get(argv[1])
-    req_id = res.headers["X-Request-Id"]
-    print(req_id)
+    req_id = res.headers.get("X-Request-Id", None)
+
+    if req_id:
+        print(req_id)
