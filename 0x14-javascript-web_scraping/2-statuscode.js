@@ -6,9 +6,10 @@
 
 const request = require('request');
 
-request.get(process.argv[2], (err, response) => {
+request.get(process.argv[2], (err, response, body) => {
   if (err) {
     return;
   }
+  body;
   console.log(`code: ${response.statusCode}`);
 });
