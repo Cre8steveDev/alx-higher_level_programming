@@ -22,7 +22,8 @@ request.get(url, (err, response, body) => {
       todoObject[datam.userId] = 0;
     }
 
-    return (todoObject[datam.userId] += datam.completed === true ? 1 : 0);
+    todoObject[datam.userId] += datam.completed === true ? 1 : 0;
+    return datam;
   });
 
   console.log(todoObject);
