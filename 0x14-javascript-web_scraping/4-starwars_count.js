@@ -18,11 +18,11 @@ request.get(urlEndpoint, (err, response, body) => {
   let characterCount = 0;
 
   for (const movie of data) {
-    const isIncluded = movie.characters.includes(
-      'https://swapi-api.alx-tools.com/api/people/18/'
+    const isIncluded = movie.characters.filter(
+      (char) => char.includes('18') === true
     );
 
-    if (isIncluded) {
+    if (isIncluded.length > 0) {
       characterCount++;
     }
   }
